@@ -2,31 +2,128 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>내 웹사이트</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 프로필 링크</title>
+    <style>
+        /* 기본 배경 및 폰트 설정 */
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        /* 가운데 카드 컨테이너 */
+        .profile-card {
+            background: rgba(255, 255, 255, 0.95);
+            max-width: 380px;
+            width: 100%;
+            border-radius: 24px;
+            padding: 35px 25px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 프로필 이미지 (동그란 형태) */
+        .avatar {
+            width: 95px;
+            height: 95px;
+            border-radius: 50%;
+            border: 4px solid #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            margin-bottom: 12px;
+            object-fit: cover;
+        }
+
+        /* 이름 및 소개글 */
+        h1 {
+            font-size: 22px;
+            color: #2d3748;
+            margin: 6px 0;
+        }
+
+        .bio {
+            font-size: 14px;
+            color: #718096;
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+
+        /* 링크 버튼 목록 영역 */
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        /* 각 링크 버튼 스타일 */
+        .link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: #ffffff;
+            color: #4a5568;
+            text-decoration: none;
+            padding: 14px 20px;
+            border-radius: 14px;
+            font-size: 15px;
+            font-weight: 600;
+            border: 1.5px solid #e2e8f0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+            transition: all 0.25s ease;
+        }
+
+        /* 마우스를 올렸을 때(호버) 살짝 떠오르는 애니메이션 효과 */
+        .link-btn:hover {
+            transform: translateY(-2px);
+            background-color: #667eea;
+            color: #ffffff;
+            border-color: #667eea;
+            box-shadow: 0 6px 15px rgba(102, 126, 234, 0.35);
+        }
+
+        /* 하단 푸터 */
+        .footer {
+            margin-top: 25px;
+            font-size: 12px;
+            color: #a0aec0;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>안녕하세요!</h1>
-    <p>첫 번째 웹사이트입니다.</p>
-    <ol>
-        <li>현우</li>
-        <li>is</li>
-        <li>gray</li>
-    </ol>
-    <button>집가는버튼</button>
-    <br>
-    <select>
-        <option>집</option>
-        <option>home</option>
-        <option>家</option>
-    </select>
-    <br>
-    <a href="second.html">
-        <button>두 번째 페이지로 이동</button>
-    </a>
-    <br>
-    <a href="second.html">
-        두 번째 페이지로 이동
-    </a>
+    <div class="profile-card">
+        <!-- 1. 프로필 사진 (예시 아바타 이미지) -->
+        <img class="avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI8n8Pfo-WJxUQMZol7Ojq7Ko6-1QAkrklRvISiaV4ocL8Uv3nDefUDgc&s=10" alt="프로필 사진">
+
+        <!-- 2. 이름과 소개 -->
+        <h1>박윤성 (Coder)</h1>
+        <p class="bio">테스트용 웹사이트</p>
+
+        <!-- 3. 링크 버튼 목록 -->
+        <div class="links">
+            <a href="https://github.com" target="_blank" class="link-btn">
+                <span>💻</span> 내 깃허브 (GitHub)
+            </a>
+            <a href="https://velog.io" target="_blank" class="link-btn">
+                <span>📝</span> 기술 블로그 놀러오기
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=s20251508@sasang.hs.kr" class="link-btn">
+                <span>✉️</span> 나에게 이메일 보내기
+            </a>
+        </div>
+
+        <!-- 4. 하단 문구 -->
+        <div class="footer">
+            © 2026 My Profile Page. All rights reserved.
+        </div>
+    </div>
+
 </body>
 </html>
